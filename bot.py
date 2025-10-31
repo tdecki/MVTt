@@ -81,6 +81,11 @@ async def vymazat(ctx):
     else:
         await ctx.send("❌ Tento příkaz může použít jen administrátor.")
 
+@bot.command()
+async def ping(ctx):
+    """Jednoduchý testovací příkaz, aby se ověřilo, že bot reaguje"""
+    await ctx.send("🏓 Pong! Bot je online!")
+
 # Spuštění bota – vlož sem svůj token
 import os
 bot.run(os.getenv("DISCORD_TOKEN"))
